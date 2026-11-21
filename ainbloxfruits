@@ -1,0 +1,17 @@
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local AllowedGameIds = {
+    [110195528296094] = true,
+    [140182619747807] = true,
+    [133855584077098] = true
+}
+
+if not AllowedGameIds[game.PlaceId] then
+    LocalPlayer:Kick("Divine Fruits Only\nJoin dsc: https://discord.gg/d2dBW8x6nd")
+    return
+end
+
+loadstring(game:HttpGet(
+    "https://keyforge.win/v1/scripts/7fba48d6-d3bd-42e4-b616-5bb67553cdac/loader"
+))()
